@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kalshi/l10n/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -14,6 +15,9 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    return const MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+    );
   }
 }
