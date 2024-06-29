@@ -14,7 +14,10 @@ void boostrap() {
   Bloc.observer = const AppBlocObserver();
 
   runZonedGuarded(
-    () => runApp(const App()),
+    () {
+      WidgetsFlutterBinding.ensureInitialized();
+      runApp(const App());
+    },
     (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }
