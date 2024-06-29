@@ -1,7 +1,43 @@
 {
   "@@locale": "en",
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
+  "findFinancialWellnessScoreTitleFirst": "Let's find out your ",
+  "@findFinancialWellnessScoreTitleFirst": {
+    "description": "First title part of text shown in the top of the Find Financial Wellness Score"
+  },
+  "findFinancialWellnessScoreTitleLast": "financial wellness score.",
+  "@findFinancialWellnessScoreTitleLast": {
+    "description": "Last title part of text shown in the top of the Find Financial Wellness Score"
+  },
+  "findFinancialWellnessTest": "Financial wellness test",
+  "@findFinancialWellnessTest": {
+    "description": "Text shown in Find Financial Wellness Score"
+  },
+  "findFinancialWellnessYourInformation": "Enter your financial information below",
+  "@findFinancialWellnessYourInformation": {
+    "description": "Text shown in Find Financial Wellness Score to enter user's financial information"
+  },
+  "findFinancialWellnessAnnualIncome": "Annual income",
+  "@findFinancialWellnessAnnualIncome": {
+    "description": "Text shown in Find Financial Wellness Score as Annual income"
+  },
+  "findFinancialWellnessMontlyCosts": "Monthly Costs",
+  "@findFinancialWellnessMontlyCosts": {
+    "description": "Text shown in Find Financial Wellness Score as Monthly Costs"
+  },
+  "findFinancialWellnessContinue": "Continue",
+  "@findFinancialWellnessContinue": {
+    "description": "Button shown in Find Financial Wellness Score as Continue"
+  },
+  "findFinancialWellnessFinancialInformation": "Your financial information is encrypted and secure. We'll never share or sell any of your personal data.",
+  "@findFinancialWellnessFinancialInformation": {
+    "description": "Text shown in Find Financial Wellness Score describing the security of user's financial information"
+  },
+  "findFinancialWellnessFinancialInvalidAnnualIncome": "Annual income must be greater than 0.",
+  "@findFinancialWellnessFinancialInvalidAnnualIncome": {
+    "description": "Text shown in Find Financial Wellness Score when the user enters an invalid Annual income"
+  },
+  "findFinancialWellnessFinancialInvalidMonthlyCosts": "Montly costs must be greater than 0.",
+  "@findFinancialWellnessFinancialInvalidMonthlyCosts": {
+    "description": "Text shown in Find Financial Wellness Score when the user enters an invalid Montly costs"
   }
 }
