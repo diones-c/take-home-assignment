@@ -7,7 +7,6 @@ class FlutterKalshiTheme {
       appBarTheme: const AppBarTheme(color: AppColors.background),
       colorScheme: ColorScheme.fromSeed(
         seedColor: AppColors.primary,
-        background: AppColors.background,
       ),
       snackBarTheme: const SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
