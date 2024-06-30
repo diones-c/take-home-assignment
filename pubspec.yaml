@@ -40,6 +40,7 @@ dependencies:
   intl: any
   cupertino_icons: ^1.0.2
   google_fonts: ^5.1.0
+  go_router: ^13.2.0
 
 dev_dependencies:
   bloc_test: ^9.1.0
@@ -61,5 +62,8 @@ flutter:
     - assets/kalshi_logo_round.svg
     - assets/dollar_sign.svg
     - assets/lock.svg
+    - assets/healthy_score.svg
+    - assets/average_score.svg
+    - assets/cauntion_score.svg
 
   

@@ -33,6 +33,13 @@ abstract class Typographies {
     height: 1.5,
   );
 
+  static final xsParagraphSemiBold = GoogleFonts.workSans().copyWith(
+    color: AppColors.info,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    height: 1.5,
+  );
+
   static final xsDescription = GoogleFonts.workSans().copyWith(
     color: AppColors.secondary,
     fontSize: 12,
@@ -48,7 +55,7 @@ abstract class Typographies {
   );
 
   static final button = GoogleFonts.workSans().copyWith(
-    color: AppColors.background,
+    color: AppColors.buttonPrimary,
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
