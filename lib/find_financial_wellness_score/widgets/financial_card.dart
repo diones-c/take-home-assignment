@@ -1,8 +1,7 @@
 part of 'package:kalshi/find_financial_wellness_score/view/find_financial_wellness_score_page.dart';
 
 class _FinancialCard extends StatelessWidget {
-  final Function(String, String) onContinuePressed;
-  const _FinancialCard({required this.onContinuePressed});
+  const _FinancialCard();
 
   @override
   Widget build(BuildContext context) {
