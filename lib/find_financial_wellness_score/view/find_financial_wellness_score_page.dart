@@ -43,8 +43,8 @@ class FindFinancialWellnessScoreView extends StatelessWidget {
           FinancialWellnessScoreResultPage.route(
             context,
             score: Score(
-              annualIncome: double.parse(state.annualIncome.value),
-              monthlyCosts: double.parse(state.annualIncome.value),
+              annualIncome: state.annualIncome.value,
+              monthlyCosts: state.monthlyCosts.value,
             ),
           );
         }

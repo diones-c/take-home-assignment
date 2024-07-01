@@ -1,15 +1,15 @@
 import 'package:formz/formz.dart';
 
 final class MonthlyCosts
-    extends FormzInput<String, MonthlyCostsValidationError> {
-  const MonthlyCosts.pure() : super.pure('');
-  const MonthlyCosts.dirty([String value = '']) : super.dirty(value);
+    extends FormzInput<double, MonthlyCostsValidationError> {
+  const MonthlyCosts.pure() : super.pure(0.0);
+  const MonthlyCosts.dirty([double value = 0.0]) : super.dirty(value);
 
   @override
-  MonthlyCostsValidationError? validator(String value) {
-    if (value.isEmpty) {
+  MonthlyCostsValidationError? validator(double value) {
+    if (value == 0.0) {
       return MonthlyCostsValidationError.empty;
-    } else if (int.tryParse(value) == null || int.parse(value) <= 0) {
+    } else if (value < 0.0) {
       return MonthlyCostsValidationError.invalid;
     } else {
       return null;

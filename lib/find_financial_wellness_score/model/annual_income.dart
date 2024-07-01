@@ -1,15 +1,15 @@
 import 'package:formz/formz.dart';
 
 final class AnnualIncome
-    extends FormzInput<String, AnnualIncomeValidationError> {
-  const AnnualIncome.pure() : super.pure('');
-  const AnnualIncome.dirty([String value = '']) : super.dirty(value);
+    extends FormzInput<double, AnnualIncomeValidationError> {
+  const AnnualIncome.pure() : super.pure(0.0);
+  const AnnualIncome.dirty([double value = 0.0]) : super.dirty(value);
 
   @override
-  AnnualIncomeValidationError? validator(String value) {
-    if (value.isEmpty) {
+  AnnualIncomeValidationError? validator(double value) {
+    if (value == 0.0) {
       return AnnualIncomeValidationError.empty;
-    } else if (int.tryParse(value) == null || int.parse(value) <= 0) {
+    } else if (value < 0.0) {
       return AnnualIncomeValidationError.invalid;
     } else {
       return null;

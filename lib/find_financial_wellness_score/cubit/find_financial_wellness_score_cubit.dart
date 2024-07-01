@@ -11,7 +11,7 @@ class FindFinancialWellnessScoreCubit
   FindFinancialWellnessScoreCubit()
       : super(const FindFinancialWellnessScoreState());
 
-  void annualIncomeChanged(String value) {
+  void annualIncomeChanged(double value) {
     final annualIncome = AnnualIncome.dirty(value);
     emit(state.copyWith(
       annualIncome: annualIncome,
@@ -19,7 +19,7 @@ class FindFinancialWellnessScoreCubit
     ));
   }
 
-  void monthlyCostsChanged(String value) {
+  void monthlyCostsChanged(double value) {
     final monthlyCosts = MonthlyCosts.dirty(value);
     emit(state.copyWith(
       monthlyCosts: monthlyCosts,

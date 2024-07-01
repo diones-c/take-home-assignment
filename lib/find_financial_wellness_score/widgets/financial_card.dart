@@ -53,7 +53,7 @@ class _FinancialCard extends StatelessWidget {
                   return TextFormField(
                     onChanged: (value) => context
                         .read<FindFinancialWellnessScoreCubit>()
-                        .annualIncomeChanged(value),
+                        .annualIncomeChanged(double.parse(value)),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(
                         borderSide:
@@ -74,9 +74,11 @@ class _FinancialCard extends StatelessWidget {
                     ),
                     textInputAction: TextInputAction.next,
                     style: Typographies.lgHeadingSmall,
-                    keyboardType: TextInputType.number,
+                    keyboardType:
+                        const TextInputType.numberWithOptions(decimal: true),
                     inputFormatters: [
-                      FilteringTextInputFormatter.digitsOnly,
+                      FilteringTextInputFormatter.allow(
+                          RegExp(r'^[0-9]+.?[0-9]*'))
                     ],
                   );
                 },
@@ -96,7 +98,7 @@ class _FinancialCard extends StatelessWidget {
                   return TextFormField(
                     onChanged: (value) => context
                         .read<FindFinancialWellnessScoreCubit>()
-                        .monthlyCostsChanged(value),
+                        .monthlyCostsChanged(double.parse(value)),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(
                         borderSide:
@@ -117,9 +119,11 @@ class _FinancialCard extends StatelessWidget {
                     ),
                     textInputAction: TextInputAction.next,
                     style: Typographies.lgHeadingSmall,
-                    keyboardType: TextInputType.number,
+                    keyboardType:
+                        const TextInputType.numberWithOptions(decimal: true),
                     inputFormatters: [
-                      FilteringTextInputFormatter.digitsOnly,
+                      FilteringTextInputFormatter.allow(
+                          RegExp(r'^[0-9]+.?[0-9]*'))
                     ],
                   );
                 },
