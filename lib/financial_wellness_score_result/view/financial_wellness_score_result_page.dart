@@ -121,7 +121,10 @@ class _FinacialWellnessResult extends StatelessWidget {
                   ),
                   const SizedBox(height: Spacings.componentM),
                   Text(
-                    l10n.financialWellnessScoreResultCongratulations,
+                    _getFinancialHealthText(
+                      financialHealth: score.financialHealth,
+                      l10n: l10n,
+                    ).title,
                     style: Typographies.xsHeadingSmall,
                   ),
                   const SizedBox(height: Spacings.componentL),
@@ -146,8 +149,10 @@ class _FinacialWellnessResult extends StatelessWidget {
                             text: l10n
                                 .financialWellnessScoreResultDescriptionFirst),
                         TextSpan(
-                          text:
-                              l10n.financialWellnessScoreResultDescriptionLast,
+                          text: _getFinancialHealthText(
+                            financialHealth: score.financialHealth,
+                            l10n: l10n,
+                          ).description,
                           style: Typographies.xsParagraphSemiBold.copyWith(
                             color: AppColors.accent,
                           ),
@@ -172,5 +177,30 @@ class _FinacialWellnessResult extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  ({String title, String description}) _getFinancialHealthText({
+    required FinancialHealth financialHealth,
+    required AppLocalizations l10n,
+  }) {
+    switch (financialHealth) {
+      case FinancialHealth.healthy:
+        return (
+          title: l10n.financialWellnessScoreResultCongratulations,
+          description: l10n.financialWellnessScoreResultDescriptionLastHealthy
+        );
+      case FinancialHealth.average:
+        return (
+          title: l10n.financialWellnessScoreResultImprovements,
+          description: l10n.financialWellnessScoreResultDescriptionLastAverage
+        );
+      case FinancialHealth.caution:
+        return (
+          title: l10n.financialWellnessScoreResultCaution,
+          description: l10n.financialWellnessScoreResultDescriptionLastCaution
+        );
+      case FinancialHealth.notCalculated:
+        return (title: '', description: '');
+    }
   }
 }

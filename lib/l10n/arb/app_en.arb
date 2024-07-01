@@ -49,12 +49,28 @@
   "@financialWellnessScoreResultCongratulations": {
     "description": "Text shown in Find Financial Wellness Score Result as Congratulations"
   },
+  "financialWellnessScoreResultImprovements": "There is room for improvement.",
+  "@financialWellnessScoreResultImprovements": {
+    "description": "Text shown in Find Financial Wellness Score Result as There is room for improvement"
+  },
+  "financialWellnessScoreResultCaution": "Caution!",
+  "@financialWellnessScoreResultCaution": {
+    "description": "Text shown in Find Financial Wellness Score Result as Caution"
+  },
   "financialWellnessScoreResultDescriptionFirst": "Your financial wellness score is ",
   "@financialWellnessScoreResultDescriptionFirst": {
     "description": "The first part of the description text shown in Find Financial Wellness Score Result"
   },
-  "financialWellnessScoreResultDescriptionLast": "Healthy.",
-  "@financialWellnessScoreResultDescriptionLast": {
+  "financialWellnessScoreResultDescriptionLastHealthy": "Healthy.",
+  "@financialWellnessScoreResultDescriptionLastHealthy": {
+    "description": "The last part of the description text shown in Find Financial Wellness Score Result"
+  },
+  "financialWellnessScoreResultDescriptionLastAverage": "Average.",
+  "@financialWellnessScoreResultDescriptionLastAverage": {
+    "description": "The last part of the description text shown in Find Financial Wellness Score Result"
+  },
+  "financialWellnessScoreResultDescriptionLastCaution": "Unhealthy.",
+  "@financialWellnessScoreResultDescriptionLastCaution": {
     "description": "The last part of the description text shown in Find Financial Wellness Score Result"
   },
   "financialWellnessScoreResultReturn": "Return",

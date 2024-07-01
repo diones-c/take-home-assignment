@@ -51,6 +51,7 @@ class _FinancialCard extends StatelessWidget {
                     previous.annualIncome != current.annualIncome,
                 builder: (context, state) {
                   return TextFormField(
+                    key: const Key('annual_income'),
                     onChanged: (value) => context
                         .read<FindFinancialWellnessScoreCubit>()
                         .annualIncomeChanged(double.parse(value)),
@@ -96,6 +97,7 @@ class _FinancialCard extends StatelessWidget {
                     previous.monthlyCosts != current.monthlyCosts,
                 builder: (context, state) {
                   return TextFormField(
+                    key: const Key('monthly_costs'),
                     onChanged: (value) => context
                         .read<FindFinancialWellnessScoreCubit>()
                         .monthlyCostsChanged(double.parse(value)),
