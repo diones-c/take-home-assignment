@@ -1,7 +1,7 @@
 import 'package:score_repository/src/models/score.dart';
 
 /// {@template score_repository}
-/// A Very Good Project created by Very Good CLI.
+/// A Score repository which manages the financial score.
 /// {@endtemplate}
 class ScoreRepository {
   /// {@macro score_repository}
