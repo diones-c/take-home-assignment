@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:kalshi/financial_wellness_score_result/financial_wellness_core_result.dart';
+import 'package:kalshi/financial_wellness_score_result/financial_wellness_score_result.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:score_repository/score_repository.dart';
 
