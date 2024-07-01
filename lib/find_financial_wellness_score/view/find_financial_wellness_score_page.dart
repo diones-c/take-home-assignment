@@ -54,6 +54,7 @@ class FindFinancialWellnessScoreView extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(80),
           child: AppBar(
+            centerTitle: true,
             title: SvgPicture.asset(AssetPaths.kalshiLogoBlack),
             elevation: 0,
           ),
