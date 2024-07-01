@@ -1,8 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:kalshi/find_financial_wellness_score/cubit/find_financial_wellness_score_cubit.dart';
-import 'package:kalshi/find_financial_wellness_score/model/annual_income.dart';
-import 'package:kalshi/find_financial_wellness_score/model/montly_costs.dart';
+import 'package:kalshi/find_financial_wellness_score/model/models.dart';
 
 void main() {
   const invalidAnnualIncomeString = '0';

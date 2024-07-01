@@ -1,8 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:formz/formz.dart';
-import 'package:kalshi/find_financial_wellness_score/find_finanancial_wellness_score.dart';
-import 'package:kalshi/find_financial_wellness_score/model/annual_income.dart';
-import 'package:kalshi/find_financial_wellness_score/model/montly_costs.dart';
+import 'package:kalshi/find_financial_wellness_score/find_financial_wellness_score.dart';
 
 void main() {
   const annualIncome = AnnualIncome.dirty('10000');
