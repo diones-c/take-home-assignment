@@ -2,6 +2,8 @@
 <img src="/assets/kalshi_logo_round.svg" height="100" alt="Kalshi" />
 </p>
 
+Kalshi is a regulated exchange & prediction market where you can trade on the outcome of real-world events. We are now developing a new feature at our app to help people to keep track of their financial situation.
+
 ## Setup
 1. We use [fvm](https://fvm.app/) for managing the flutter version within the project. Still using the terminal, navigate to the newly added **project** folder and install the tools dependencies by
    running the following commands:
@@ -15,7 +17,7 @@
     ```sh
     export PATH="$PATH":"$HOME/.pub-cache/bin" # Add this to your environment variables
     ```
-
+    
 2. Install the project's flutter version using `fvm`.
 
     ```sh
