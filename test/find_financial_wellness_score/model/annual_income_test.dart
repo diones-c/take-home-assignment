@@ -7,7 +7,7 @@ void main() {
     group('constructors', () {
       test('pure creates correct instance', () {
         const annualIncome = AnnualIncome.pure();
-        expect(annualIncome.value, '');
+        expect(annualIncome.value, 0.0);
         expect(annualIncome.isPure, true);
       });
 

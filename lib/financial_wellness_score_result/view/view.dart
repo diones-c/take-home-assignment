@@ -1,0 +1,1 @@
+export 'package:kalshi/financial_wellness_score_result/view/financial_wellness_score_result_page.dart';
