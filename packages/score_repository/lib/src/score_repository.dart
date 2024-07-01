@@ -22,25 +22,29 @@ class ScoreRepository {
     required Score score,
   }) {
     final annualIncome = score.annualIncome;
-    final monthlyCosts = score.monthlyCosts;
-    final monthlyIncome = score.annualIncome / 12;
+    final annualNetCompensation = annualIncome - (0.08 * annualIncome);
 
-    if (monthlyCosts <= 0.01 * monthlyIncome) {
+    final monthlyCosts = score.monthlyCosts;
+    final annualCosts = monthlyCosts * 12;
+
+    final costPercentage = (annualCosts / annualNetCompensation) * 100;
+
+    if (costPercentage <= 25) {
       return Score(
         annualIncome: annualIncome,
-        monthlyCosts: monthlyIncome,
+        monthlyCosts: monthlyCosts,
         financialHealth: FinancialHealth.healthy,
       );
-    } else if (monthlyCosts <= 0.03 * monthlyIncome) {
+    } else if (costPercentage <= 75) {
       return Score(
         annualIncome: annualIncome,
-        monthlyCosts: monthlyIncome,
+        monthlyCosts: monthlyCosts,
         financialHealth: FinancialHealth.average,
       );
     } else {
       return Score(
         annualIncome: annualIncome,
-        monthlyCosts: monthlyIncome,
+        monthlyCosts: monthlyCosts,
         financialHealth: FinancialHealth.caution,
       );
     }
