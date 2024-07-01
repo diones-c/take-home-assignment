@@ -112,8 +112,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 @override
 Widget build(BuildContext context) {
-  final appLocalizations = AppLocalizations.of(context);
-  return Text(appLocalizations.scan);
+  final l10n = context.l10n;
+  return Text(l10n.findFinancialWellnessTest);
 }
 ```
 
