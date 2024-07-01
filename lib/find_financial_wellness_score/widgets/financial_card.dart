@@ -54,7 +54,7 @@ class _FinancialCard extends StatelessWidget {
                     key: const Key('annual_income'),
                     onChanged: (value) => context
                         .read<FindFinancialWellnessScoreCubit>()
-                        .annualIncomeChanged(double.parse(value)),
+                        .annualIncomeChanged(double.tryParse(value) ?? 0.0),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(
                         borderSide:
@@ -100,7 +100,7 @@ class _FinancialCard extends StatelessWidget {
                     key: const Key('monthly_costs'),
                     onChanged: (value) => context
                         .read<FindFinancialWellnessScoreCubit>()
-                        .monthlyCostsChanged(double.parse(value)),
+                        .monthlyCostsChanged(double.tryParse(value) ?? 0.0),
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(
                         borderSide:
