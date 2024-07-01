@@ -1,5 +1,9 @@
 import 'package:formz/formz.dart';
 
+/// A class representing the annual income input.
+///
+/// It extends [FormzInput] and uses [double] as the value type and
+/// [AnnualIncomeValidationError] as the error type.
 final class AnnualIncome
     extends FormzInput<double, AnnualIncomeValidationError> {
   const AnnualIncome.pure() : super.pure(0.0);

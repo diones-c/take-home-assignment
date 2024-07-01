@@ -1,5 +1,9 @@
 import 'package:formz/formz.dart';
 
+/// A class representing the monthly costs input.
+///
+/// It extends [FormzInput] and uses [double] as the value type and
+/// [MonthlyCostsValidationError] as the error type.
 final class MonthlyCosts
     extends FormzInput<double, MonthlyCostsValidationError> {
   const MonthlyCosts.pure() : super.pure(0.0);

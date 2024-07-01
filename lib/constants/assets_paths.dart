@@ -1,7 +1,6 @@
 /// A class that holds all the asset paths.
 ///
 /// This class should **NOT** be extended.
-
 abstract class AssetPaths {
   const AssetPaths._();
 

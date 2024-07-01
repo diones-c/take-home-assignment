@@ -1,3 +1,4 @@
+/// Spacings used in the app.
 abstract class Spacings {
   const Spacings._();
 

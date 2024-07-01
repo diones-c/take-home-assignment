@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kalshi/theme/colors.dart';
 
+/// A class containing the typography constants used in the app.
 abstract class Typographies {
   const Typographies._();
 

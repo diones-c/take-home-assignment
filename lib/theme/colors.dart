@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+/// A class containing the color constants used in the app.
 abstract class AppColors {
   AppColors._();
 
