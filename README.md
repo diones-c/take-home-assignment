@@ -39,8 +39,6 @@ Kalshi is a regulated exchange & prediction market where you can trade on the ou
 
 ## Architecture
 
-![architecture]
-
 - Data layer: This layer interacts directly with an API (REST API or a device API).
 - Domain layer: This layer transforms or manipulates the data that the API provides.
 - Presentation layer: This layer presents the app content and triggers events that modify the application state.
