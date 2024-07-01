@@ -14,13 +14,10 @@ get:
 	done
 
 testing:
+	echo "Running test on $(FEATURES)" ;
 	fvm flutter test
-	for feature in $(FEATURES); do \
-		cd $${feature} ; \
-		echo "Running test on $${feature}" ; \
-		fvm flutter test ; \
-		cd ../../../ ; \
-	done
+	cd ../../../ 
+
 	for package in $(PACKAGES); do \
 		cd $${package} ; \
 		echo "Running test on $${package}" ; \
