@@ -1,56 +1,131 @@
-# THA
+<p align="center">
+<img src="/assets/kalshi_logo_round.svg" height="100" alt="Kalshi" />
+</p>
 
-## General instructions
+## Setup
+1. We use [fvm](https://fvm.app/) for managing the flutter version within the project. Still using the terminal, navigate to the newly added **project** folder and install the tools dependencies by
+   running the following commands:
 
-We want you to create a great structure and scalable project for maintenance that respects the tests scenarios and business rules.
+    ```sh
+    dart pub global activate fvm
+    ```
 
-We also want you to write a great README file in English. We want to understand the structure decisions you made. Think of it as a file that another software engineer will read before continuing the piece of art you created.
+    The output of the command will ask to add the folder `./pub-cache/bin` to your PATH variables, if you didn't already. If that is the case, add it to your environment variables, and restart the terminal.
+
+    ```sh
+    export PATH="$PATH":"$HOME/.pub-cache/bin" # Add this to your environment variables
+    ```
+
+2. Install the project's flutter version using `fvm`.
+
+    ```sh
+    fvm use
+    ```
+
+3. From now on, you will run all the flutter commands with the `fvm` prefix. Get all the projects dependencies.
+
+    ```sh
+    fvm flutter pub get
+    ```
+
+4. You can use the makefile to get all dependencies of the project running `make get`
 
 
-💡 **IMPORTANT**: you can only use flutter to implement this assignment.
+## Features 🎯
+- Find Financial Wellness Score
+- Financial Wellness Score Result
 
+## Architecture
 
-## The challenge!
+![architecture]
 
-Kalshi is a regulated exchange & prediction market where you can trade on the outcome of real-world events. We are now developing a new feature at our app to help people to keep track of their financial situation.
+- Data layer: This layer interacts directly with an API (REST API or a device API).
+- Domain layer: This layer transforms or manipulates the data that the API provides.
+- Presentation layer: This layer presents the app content and triggers events that modify the application state.
 
-In order to do that, users should register information regarding their financial situation in our app. Two key pieces of information are his **annual gross income** and **average monthly costs**.
-
-## Development Instructions
-### Business rules
-
-Based on that information, the system should calculate a score to represent how healthy his financial life is, meaning:
-
-- At the end of the year, the user has to pay 8% x over his annual gross income.
-- If the user annual costs represents less than or is equal to 25% of his annual net compensation, his score is HEALTHY;
-- If the user annual costs is greater than 25% and less than or equal 75% of his annual net compensation, his score is MEDIUM;
-- If the user annual costs is greater than 75% of his annual net compensation, his score is LOW;
-
-E.g
+## Application
+The application follow the pattern page/view, each feature contains the pattern feature_page.dart and inside a FeaturePage and a FeatureView.
 
 ```
-Annual Income = 1000 && Monthly Costs = 10 = HEALTHY
-
-Annual Income = 1000 && Monthly Costs = 30 = MEDIUM
-
-Annual Income = 1000 && Monthly Costs = 80 = LOW
+├── lib
+|   ├── app
+|   |   ├── routes
+│   │   │   └── routes.dart
+│   │   ├── app.dart
+│   │   ├── view.dart
+|   ├── scan
+│   │   ├── cubit
+│   │   │   └── find_financial_wellness_score_cubit.dart
+|   |   |   └── find_financial_wellness_score_state.dart
+│   │   └── view
+│   │   |   ├── find_financial_wellness_score_page.dart
+|   |   |   └── view.dart
+|   |   └── widgets
+|   |   |   └── find_financial_wellness_score.dart
+│   │   ├── scan.dart
+│   ├── bootstrap.dart
+│   └── main.dart
+├── pubspec.lock
+├── pubspec.yaml
 ```
 
-### Presentation rules
 
-You should create a form where the user will be able to inform his annual gross income and average monthly costs. When submitting the information, the user will be presented his financial wellness score.
+## Working with Translations 🌐
 
+This project relies on [flutter_localizations][flutter_localizations_link] and follows the [official internationalization guide for Flutter][internationalization_link].
 
-🧑‍🎨 You should follow this [Figma File](https://www.figma.com/design/VjioJW8BHtC6poQjJSJUmE/Take-Home-Assignment?node-id=0-1&t=aJye8WoiUMJGKIaF-1) for building your screens
+### Adding Strings
 
+1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
 
-The form should validate:
+```arb
+{
+  "@@locale": "en",
+  "findFinancialWellnessScoreTitleFirst": "Let's find out your ",
+  "@findFinancialWellnessScoreTitleFirst": {
+    "description": "First title part of text shown in the top of the Find Financial Wellness Score"
+  },
+  "findFinancialWellnessScoreTitleLast": "financial wellness score.",
+  "@findFinancialWellnessScoreTitleLast": {
+    "description": "Last title part of text shown in the top of the Find Financial Wellness Score"
+  }
+}
+```
 
-- annual income is greater than zero;
-- monthly costs are greater than zero;
-- inputs should allow only numbers;
-- inputs are required.
+2. Then add a new key/value and description
 
-## Delivery Instructions
+```arb
+{
+    "findFinancialWellnessTest": "Financial wellness test",
+    "@findFinancialWellnessTest": {
+        "description": "Text shown in Find Financial Wellness Score"
+    }
+}
+```
 
-You can share your project via Github or send a package to us. If using Github, please, make sure we can access it by making it public.
+3. Use the new string
+
+```dart
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+@override
+Widget build(BuildContext context) {
+  final appLocalizations = AppLocalizations.of(context);
+  return Text(appLocalizations.scan);
+}
+```
+
+## Tests
+- To run the tests execute `make testing`
+
+### External packages
+* [formz](https://pub.dev/packages/formz) A unified form representation in Dart. Formz aims to simplify form representation and validation in a generic way.
+* [Bloc](https://pub.dev/packages/flutter_bloc) A dart package that helps implement the BLoC pattern.
+* [intl](https://pub.dev/packages/intl) Provides internationalization and localization facilities, including message translation, plurals and genders, date/number formatting and parsing, and bidirectional text.
+* [Google Fonts](https://pub.dev/packages/google_fonts) A Flutter package to use fonts from fonts.google.com
+* [intl](https://github.com/ReactiveX/RxAndroid) Provides internationalization and localization facilities, including message translation, plurals and genders, date/number formatting and parsing, and bidirectional text.
+* [Go router](https://pub.dev/packages/go_router) A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens.
+* [Flutter Launcher icons](https://pub.dev/packages/flutter_launcher_icons) A command-line tool which simplifies the task of updating your Flutter app's launcher icon.
+* [Very Good Analysis](https://pub.dev/packages/very_good_analysis) This package provides lint rules for Dart and Flutter
+* [Equatable](https://pub.dev/packages/equatable) Being able to compare objects in Dart often involves having to override the == operator as well as hashCode.
+* [Flutter SVG](https://pub.dev/packages/flutter_svg) Draw SVG files using Flutter.
