@@ -3,8 +3,8 @@ import 'package:formz/formz.dart';
 import 'package:kalshi/find_financial_wellness_score/find_financial_wellness_score.dart';
 
 void main() {
-  const annualIncome = AnnualIncome.dirty('10000');
-  const monthlyCosts = MonthlyCosts.dirty('10000');
+  const annualIncome = AnnualIncome.dirty(10000);
+  const monthlyCosts = MonthlyCosts.dirty(10000);
 
   group('FindFinancialWellnessScoreState', () {
     test('supports value comparisons', () {

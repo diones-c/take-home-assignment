@@ -4,16 +4,16 @@ import 'package:kalshi/find_financial_wellness_score/cubit/find_financial_wellne
 import 'package:kalshi/find_financial_wellness_score/model/models.dart';
 
 void main() {
-  const invalidAnnualIncomeString = '0';
+  const invalidAnnualIncomeString = 0.0;
   const invalidAnnualIncome = AnnualIncome.dirty(invalidAnnualIncomeString);
 
-  const validAnnualIncomeString = '10000';
+  const validAnnualIncomeString = 1000.0;
   const validAnnualIncome = AnnualIncome.dirty(validAnnualIncomeString);
 
-  const invalidMonthlyCostsString = '0';
+  const invalidMonthlyCostsString = 0.0;
   const invalidMonthlyCosts = MonthlyCosts.dirty(invalidMonthlyCostsString);
 
-  const validMonthlyCostsString = '1000';
+  const validMonthlyCostsString = 1000.0;
   const validMonthlyCosts = MonthlyCosts.dirty(validMonthlyCostsString);
 
   group('FindFinancialWellnessScoreCubit', () {

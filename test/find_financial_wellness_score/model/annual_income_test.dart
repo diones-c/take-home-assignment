@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:kalshi/find_financial_wellness_score/model/annual_income.dart';
 
 void main() {
-  const annualIncomeString = '10000';
+  const annualIncomeString = 10000.0;
   group('AnnualIncome', () {
     group('constructors', () {
       test('pure creates correct instance', () {
