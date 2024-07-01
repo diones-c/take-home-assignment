@@ -22,7 +22,10 @@ class _FinancialCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SvgPicture.asset(AssetPaths.kalshiLogoRound),
+          Hero(
+            tag: AssetPaths.kalshiLogoRound,
+            child: SvgPicture.asset(AssetPaths.kalshiLogoRound),
+          ),
           const SizedBox(height: Spacings.componentM),
           Text(
             l10n.findFinancialWellnessTest,

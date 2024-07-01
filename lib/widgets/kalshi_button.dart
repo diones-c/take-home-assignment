@@ -3,38 +3,52 @@ import 'package:kalshi/theme/colors.dart';
 import 'package:kalshi/theme/spacings.dart';
 import 'package:kalshi/theme/typographies.dart';
 
+enum KalshiButtonType { primary, secondary }
+
 class KalshiButton extends StatelessWidget {
   final String buttonLabel;
   final Function()? onPressed;
+  final KalshiButtonType buttonType;
 
   const KalshiButton({
     required this.buttonLabel,
     required this.onPressed,
+    this.buttonType = KalshiButtonType.primary,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+    final backgroundColor = buttonType == KalshiButtonType.primary
+        ? MaterialStateProperty.all(AppColors.primary)
+        : null;
+    final shape = MaterialStateProperty.all(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(Spacings.componentXl),
+        side: buttonType == KalshiButtonType.primary
+            ? BorderSide.none
+            : const BorderSide(color: AppColors.primary, width: 2),
+      ),
+    );
+    final buttonLabelColor = buttonType == KalshiButtonType.primary
+        ? AppColors.background
+        : AppColors.buttonPrimary;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        ElevatedButton(
+        TextButton(
           style: ButtonStyle(
+            backgroundColor: backgroundColor,
             textStyle: MaterialStateProperty.all(Typographies.button),
-            backgroundColor: MaterialStateProperty.all(AppColors.primary),
             padding: MaterialStateProperty.all(
               const EdgeInsets.all(Spacings.componentL),
             ),
-            shape: MaterialStateProperty.all(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(Spacings.componentXl),
-              ),
-            ),
+            shape: shape,
           ),
           onPressed: onPressed,
           child: Text(
             buttonLabel,
-            style: Typographies.button,
+            style: Typographies.button.copyWith(color: buttonLabelColor),
           ),
         ),
       ],

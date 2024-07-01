@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:kalshi/find_financial_wellness_score/find_finanancial_wellness_score.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kalshi/app/routes/routes.dart';
 import 'package:kalshi/l10n/l10n.dart';
 import 'package:kalshi/theme/theme.dart';
+import 'package:score_repository/score_repository.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  const App({
+    required this.scoreRepository,
+    super.key,
+  });
+
+  final ScoreRepository scoreRepository;
 
   @override
   Widget build(BuildContext context) {
-    return const AppView();
+    return RepositoryProvider.value(
+      value: scoreRepository,
+      child: const AppView(),
+    );
   }
 }
 
@@ -17,11 +27,11 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       theme: FlutterKalshiTheme.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const FindFinancialWellnessScorePage(),
     );
   }
 }

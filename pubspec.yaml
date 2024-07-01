@@ -41,6 +41,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^5.1.0
   go_router: ^13.2.0
+  score_repository:
+    path: packages/score_repository
 
 dev_dependencies:
   bloc_test: ^9.1.0
@@ -48,6 +50,7 @@ dev_dependencies:
     sdk: flutter
   mocktail: ^1.0.0
   flutter_lints: ^2.0.0
+  very_good_analysis: ^5.1.0
 
 flutter:
 
@@ -64,6 +67,6 @@ flutter:
     - assets/lock.svg
     - assets/healthy_score.svg
     - assets/average_score.svg
-    - assets/cauntion_score.svg
+    - assets/caution_score.svg
 
   

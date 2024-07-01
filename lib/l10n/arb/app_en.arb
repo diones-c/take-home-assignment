@@ -28,10 +28,6 @@
   "@findFinancialWellnessContinue": {
     "description": "Button shown in Find Financial Wellness Score as Continue"
   },
-  "findFinancialWellnessFinancialInformation": "Your financial information is encrypted and secure. We'll never share or sell any of your personal data.",
-  "@findFinancialWellnessFinancialInformation": {
-    "description": "Text shown in Find Financial Wellness Score describing the security of user's financial information"
-  },
   "findFinancialWellnessFinancialInvalidAnnualIncome": "Annual income must be greater than 0.",
   "@findFinancialWellnessFinancialInvalidAnnualIncome": {
     "description": "Text shown in Find Financial Wellness Score when the user enters an invalid Annual income"
@@ -39,5 +35,35 @@
   "findFinancialWellnessFinancialInvalidMonthlyCosts": "Montly costs must be greater than 0.",
   "@findFinancialWellnessFinancialInvalidMonthlyCosts": {
     "description": "Text shown in Find Financial Wellness Score when the user enters an invalid Montly costs"
+  },
+
+  "financialWellnessScoreResultTitleFirst": "Here's your ",
+  "@financialWellnessScoreResultTitleFirst": {
+    "description": "First title part of text shown in the top of the Financial Wellness Score Result"
+  },
+  "financialWellnessScoreResultTitleLast": "financial wellness score.",
+  "@financialWellnessScoreResultTitleLast": {
+    "description": "Last title part of text shown in the top of the Financial Wellness Score Result"
+  },
+ "financialWellnessScoreResultCongratulations": "Congratulations!",
+  "@financialWellnessScoreResultCongratulations": {
+    "description": "Text shown in Find Financial Wellness Score Result as Congratulations"
+  },
+  "financialWellnessScoreResultDescriptionFirst": "Your financial wellness score is ",
+  "@financialWellnessScoreResultDescriptionFirst": {
+    "description": "The first part of the description text shown in Find Financial Wellness Score Result"
+  },
+  "financialWellnessScoreResultDescriptionLast": "Healthy.",
+  "@financialWellnessScoreResultDescriptionLast": {
+    "description": "The last part of the description text shown in Find Financial Wellness Score Result"
+  },
+  "financialWellnessScoreResultReturn": "Return",
+  "@financialWellnessScoreResultReturn": {
+    "description": "The button shown in Find Financial Wellness Score Result as Return"
+  },
+  
+  "financialEncryptedInformation": "Your financial information is encrypted and secure. We'll never share or sell any of your personal data.",
+  "@financialEncryptedInformation": {
+    "description": "Informative text to let the user know that their financial information is secure"
   }
 }
