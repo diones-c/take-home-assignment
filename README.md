@@ -131,3 +131,6 @@ Widget build(BuildContext context) {
 * [Very Good Analysis](https://pub.dev/packages/very_good_analysis) This package provides lint rules for Dart and Flutter
 * [Equatable](https://pub.dev/packages/equatable) Being able to compare objects in Dart often involves having to override the == operator as well as hashCode.
 * [Flutter SVG](https://pub.dev/packages/flutter_svg) Draw SVG files using Flutter.
+
+[flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
+[internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
